@@ -158,3 +158,24 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.2ms)
 
 
+Started DELETE "/articles/1" for 173.2.184.204 at 2020-10-13 00:47:31 +0000
+Cannot render console from 173.2.184.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oj1UnwiKZYVmFTS1DCxDOnMHd+7yt0nP3PcEoKlf3R0rJ06vPS83j8JqLakH0XR4nA+P7FmDz2NxSUNvz/0yLA==", "id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 1]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://157.230.220.151:58351/articles
+Completed 302 Found in 12ms (ActiveRecord: 7.6ms)
+
+
+Started GET "/articles" for 173.2.184.204 at 2020-10-13 00:47:31 +0000
+Cannot render console from 173.2.184.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendered articles/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 35ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
